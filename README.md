@@ -1,8 +1,8 @@
 docker-ubuntu-vnc-desktop
 =========================
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/esraghu/docker-ubuntu-vnc-desktop/.svg)](https://hub.docker.com/r/esraghu/docker-ubuntu-vnc-desktop/)
-[![Docker Stars](https://img.shields.io/docker/stars/esraghu/docker-ubuntu-vnc-desktop/.svg)](https://hub.docker.com/r/docker-ubuntu-vnc-desktop/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/esraghu/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/esraghu/docker-ubuntu-vnc-desktop/)
+[![Docker Stars](https://img.shields.io/docker/stars/esraghu/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/esraghu/docker-ubuntu-vnc-desktop/)
 <a href="https://ko-fi.com/dorowu" target="_blank"><img src="https://az743702.vo.msecnd.net/cdn/kofi2.png" width="142" height="36"></a>
 
 Docker image to provide a Virtual Box kind of functionality while having the ability to use the User Interface through a Browser, being able to install and run Code Editors and more importantly being able to run docker containers inside this. A HTML5 VNC interface to access Ubuntu 16.04 LXDE desktop environment has been provided.
