@@ -1,10 +1,25 @@
 docker-ubuntu-vnc-desktop
 =========================
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/dorowu/ubuntu-desktop-lxde-vnc.svg)](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
-[![Docker Stars](https://img.shields.io/docker/stars/dorowu/ubuntu-desktop-lxde-vnc.svg)](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/esraghu/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/esraghu/docker-ubuntu-vnc-desktop/)
+[![Docker Stars](https://img.shields.io/docker/stars/esraghu/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/esraghu/docker-ubuntu-vnc-desktop/)
+<a href="https://ko-fi.com/dorowu" target="_blank"><img src="https://az743702.vo.msecnd.net/cdn/kofi2.png" width="142" height="36"></a>
 
-Docker image to provide HTML5 VNC interface to access Ubuntu 16.04 LXDE desktop environment.
+Docker image to provide a Virtual Box kind of functionality while having the ability to use the User Interface through a Browser, being able to install and run Code Editors and more importantly being able to run docker containers inside this. A HTML5 VNC interface to access Ubuntu 16.04 LXDE desktop environment has been provided.
+If you are looking for a place where you can bring the latest Ubuntu with Desktop experience, this is it. You don't have to spend a lot of time downloading a ISO image, installing Virtual Box etc and then installing it. This comes up in matter of minutes. While this works in any platform, I've mainly been building it on Google Cloud Platform.
+
+To run on Google Cloud Platform (GCP)
+-------------------------------------
+I have been trying to spin up a server in GCP which has a GUI with a good desktop experience, while also being able to install and run any programs I want, including other Docker containers. 
+What you need to do to bring up this in a GCP VM is while creating a new instance: 
+1. check the prompt 'Deploy a container image to this instance' and then paste `esraghu/docker-ubuntu-vnc-desktop`. 
+2. I recommend you to run a minimum 1vCPU and 3.75GB RAM to get a decent experience and depending on the applications you're going to run, it's upto you to have a more vCPUs bigger RAM.
+3. Click on Advanced container options and most definitely select `Run as Previliged` to be able to further run dockers inside it
+4. Add Environment variables based for passing those variables - various variables have been mentioned below
+5. You can also add mount points to keep data persistent and also add 
+6. Under the firewall, select both HTTP and HTTPS as this will give you the ability to access desktop using both these protocols. All that you need to do is type in http://ipaddress or https://ipaddress (for https you will have to add environment variable SSL_PORT=443 and mount a location where you have ssl keys as /etc/nginx/ssl)
+For further details on deploying containers through GCP, refer to the following link: https://cloud.google.com/compute/docs/containers/deploying-containers?hl=en_GB&_ga=2.77405397.-1992917830.1508901091
+
 
 Quick Start
 -------------------------

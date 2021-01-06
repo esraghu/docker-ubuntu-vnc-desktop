@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Let's run the wrapdocker first
+/usr/local/bin/wrapdocker &
+
 if [ -n "$VNC_PASSWORD" ]; then
     echo -n "$VNC_PASSWORD" > /.password1
     x11vnc -storepasswd $(cat /.password1) /.password2
